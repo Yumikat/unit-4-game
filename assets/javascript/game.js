@@ -17,12 +17,18 @@ function random() {
     targetNumber = [Math.floor(Math.random() * (120 - 19) + 19)];
     console.log(targetNumber);
     console.log("mouse");
+
+    //Attaching number values to crystals
+$("#blueCrystal").attr("data-crystalvalue", randomNumber[0]);
+$("#purpleCrystal").attr("data-crystalvalue", randomNumber[1]);
+$("#greenCrystal").attr("data-crystalvalue", randomNumber[2]);
+$("#redCrystal").attr("data-crystalvalue", randomNumber[3]);
 }
 
 function resetGame() {
     $("#totalscore, #target-number").empty();
     totalscore = 0;
-    // targetNumber = 0;
+
     random();
     
     $("#totalscore").text(totalscore);
@@ -37,11 +43,7 @@ $("#losses-text").text(losses);
 $("#totalscore").text(totalscore);
 $("#target-number").text(targetNumber);
 
-//Attaching number values to crystals
-$("#blueCrystal").attr("data-crystalvalue", randomNumber[0]);
-$("#purpleCrystal").attr("data-crystalvalue", randomNumber[1]);
-$("#greenCrystal").attr("data-crystalvalue", randomNumber[2]);
-$("#redCrystal").attr("data-crystalvalue", randomNumber[3]);
+
 
 //Adding an event when any crystal is clicked on
 $(".crystalImages").on("click", function () {

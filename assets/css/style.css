@@ -2,3 +2,19 @@
     width: 100px;
     height: 100px;
 }
+
+body {
+    text-align: center;
+    color: midnightblue;
+    background: mintcream;
+    font-family: 'EB Garamond', serif;
+    margin: 100px;
+}
+
+h1 {
+    font-family: 'Cinzel', serif;
+}
+
+img {
+    margin: 40px;
+}
